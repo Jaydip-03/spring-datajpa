@@ -1,0 +1,18 @@
+
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+
+<h1> All Employee </h1>
+
+<c:forEach items="${all}" var="e">
+	<div style="border: 2px solid black;">
+		<h4>${e.getId()}</h4>
+			<h4>${e.getName()}</h4>
+				<h4>${e.getAge()}</h4>
+					<h4>${e.getEmail()}</h4>
+						<h4>${e.getDesignation()}</h4>
+							<h4>${e.getSalary()}</h4>
+								<h4>${e.getContact()}</h4>
+	</div>
+	<br>
+</c:forEach>

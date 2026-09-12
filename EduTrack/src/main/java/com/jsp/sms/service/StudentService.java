@@ -1,0 +1,70 @@
+package com.jsp.sms.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jsp.sms.entity.Student;
+import com.jsp.sms.repository.StudentRepo;
+
+
+@Service
+public class StudentService {
+	
+	@Autowired
+	private StudentRepo repo ;
+	
+	
+	public void saveStudent (Student std) {
+		repo.save(std) ;
+		
+	}
+	
+	
+public boolean emailValid(String email, long num) {
+		
+		Student student = repo.findByEmail(email) ;
+		
+		if(student != null && student.getMobile() == num ) {
+			return true ;
+		}
+		return false ;
+		
+	}
+	
+	public List<Student> getAllStudent() {
+		
+		return repo.findAll() ;
+	}
+	
+	
+	
+	public Student getStudent(int id) {
+		
+		Student student = repo.findById(id).get() ;
+		
+		return student ;
+	}
+	
+	
+	public void deleteStdById(int id) {
+		
+		repo.deleteById(id) ;
+	}
+	
+	
+	public List<Student> getStudentByName(String name) {
+		
+		return repo.findByName(name) ;
+	}
+	
+	
+	
+	
+	
+	public void deleteAllStudent() {
+		repo.deleteAll() ;
+		}
+
+}

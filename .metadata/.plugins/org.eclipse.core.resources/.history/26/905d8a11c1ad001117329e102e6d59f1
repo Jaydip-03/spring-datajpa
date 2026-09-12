@@ -1,0 +1,26 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Student Details</title>
+
+<body>
+	
+	<h1>
+		Sell all Student info 
+	</h1>
+	
+	<c:forEach items="${all}" var="std">
+		<div>
+			Id : ${std.getId()} 
+			Name : ${std.getName()}
+			Age : ${std.getAge()}
+		</div>
+		
+	</c:forEach>
+	
+</body>
+</html>

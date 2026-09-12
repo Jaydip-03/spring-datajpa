@@ -1,0 +1,7 @@
+
+<h2>Welcome to Register page </h2>
+
+<form action="/register" method="post" >
+	Id : <input type="number" name="id" > <br>
+	
+</form>

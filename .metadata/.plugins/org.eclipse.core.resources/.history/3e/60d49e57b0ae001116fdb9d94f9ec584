@@ -1,0 +1,19 @@
+
+<html>
+<body> 
+	
+	<h1>Login page </h1>
+	
+	<form action="loginVal" method="post">
+		
+		Eamil : <input type="email" name="email">
+		<br>
+		Phon no : <input type="number" name="mobile">
+		<br>
+		<input type="submit" value="submit" >
+		
+	</form>
+	
+	<a href="registerPage"> new Register </a> 
+</body>
+</html>

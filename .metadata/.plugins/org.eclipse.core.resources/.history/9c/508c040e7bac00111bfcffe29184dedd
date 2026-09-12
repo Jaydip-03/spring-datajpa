@@ -1,0 +1,9 @@
+
+<form action="editEmp" method="post">
+	Id : <input type="number" name="id" value="${emp.getId()}" readonly > <br>
+	Name : <input type="text" name="name" value="${emp.getName()}"> <br>
+	Age : <input type="text" name="age" value="${emp.getAge()}"> <br>
+	
+	<input type="submit" value="update"> 
+	
+</form>
