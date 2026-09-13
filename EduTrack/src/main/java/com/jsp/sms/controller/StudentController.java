@@ -131,11 +131,6 @@ public class StudentController {
 	}
 	
 	
-	@GetMapping("/deleteAll")
-	public void deleteAllStd() {
-		
-		service.deleteAllStudent() ;
-	}
 	
 	
 	
